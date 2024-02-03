@@ -16,11 +16,11 @@ export class CourseCardComponent {
   })
   course: Course;
 
-  @Output()
-  courseSelected = new EventEmitter<Course>;
+  @Output('courseSelected')
+  courseEmitter = new EventEmitter<Course>;
 
   onCourseViewed() {
     console.log(' card component - button clicked ... ');
-    this.courseSelected.emit(this.course);
+    this.courseEmitter.emit(this.course);
   }
 }
