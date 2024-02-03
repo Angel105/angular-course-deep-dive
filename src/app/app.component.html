@@ -8,9 +8,9 @@
 <h1>{{coreCourse.description}}</h1>
 <div class="courses">
 
-  <course-card (click)="onCardClick()" [course]="coreCourse"></course-card>
-  <course-card (click)="onCardClick()" [course]="rxjsCourse"></course-card>
-  <course-card (click)="onCardClick()" [course]="ngrxCourse"></course-card>
+  <course-card (courseSelected)="onCourseSelected($event)" [course]="coreCourse"></course-card>
+  <course-card (courseSelected)="onCourseSelected($event)" [course]="rxjsCourse"></course-card>
+  <course-card (courseSelected)="onCourseSelected($event)" [course]="ngrxCourse"></course-card>
 
 </div>
 
