@@ -12,4 +12,7 @@ export class AppComponent {
   rxjsCourse = COURSES[1];
   ngrxCourse = COURSES[2];
 
+  onCardClick() {
+    console.log('App component - click event bubbled ...');
+  }
 }
