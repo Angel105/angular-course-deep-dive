@@ -8,7 +8,7 @@ import {Course} from './model/course';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
+  courses = COURSES;
   coreCourse = COURSES[0];
   rxjsCourse = COURSES[1];
   ngrxCourse = COURSES[2];
