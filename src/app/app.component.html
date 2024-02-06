@@ -5,10 +5,10 @@
 
 </div>
 
-<h1>{{coreCourse.description}}</h1>
 <div class="courses">
 
-  <course-card (courseSelected)="onCourseSelected($event)" [course]="coreCourse"/>
+  <course-card *ngFor="let course of courses"
+    (courseSelected)="onCourseSelected($event)" [course]="course"/>
 
 </div>
 
