@@ -24,4 +24,8 @@ export class CourseCardComponent {
     console.log(' card component - button clicked ... ');
     this.courseEmitter.emit(this.course);
   }
+
+  isImageVisible() {
+    return this.course && this.course.iconUrl;
+  }
 }
