@@ -7,6 +7,8 @@
   @if(course.iconUrl) {
     <img width="300" alt="Angular Logo"
          [src]="course.iconUrl">
+  } @else {
+    <h2>No image available</h2>
   }
 
   <div class="course-description">
