@@ -31,8 +31,7 @@ export class CourseCardComponent {
 
   cardClasses() {
     return {
-      'beginner': true,
-      'course-card': true
+      'beginner': this.course.category === 'BEGINNER'
     };
   }
 }
