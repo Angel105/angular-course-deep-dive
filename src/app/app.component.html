@@ -5,7 +5,9 @@
 
 </div>
 
-<pre>{{ courses | json }}</pre>
+<div *ngFor="let pair of course | keyvalue">
+    {{pair.key + ' : ' + pair.value}}
+</div>
 
 <div class="courses">
 
@@ -18,5 +20,3 @@
     (courseSelected)="onCourseSelected($event)" [course]="course" [cardIndex] = "i + 1"/>
 
 </div>
-
-
