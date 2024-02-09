@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, EventEmitter, Input, Output, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, ContentChild, EventEmitter, Input, Output, ViewChild} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {Course} from '../model/course';
 
@@ -21,7 +21,7 @@ export class CourseCardComponent implements AfterViewInit {
   courseEmitter = new EventEmitter<Course>;
   @Input() cardIndex!: number;
 
-  @ViewChild('courseImage')
+  @ContentChild('courseImage')
   image;
 
   ngAfterViewInit() {
