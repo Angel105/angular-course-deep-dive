@@ -18,19 +18,16 @@ export class AppComponent implements AfterViewInit {
   @ViewChild('cardRef1', {read: ElementRef})
   card1: ElementRef;
 
-  @ViewChild('container')
-  containerDiv: ElementRef;
+  @ViewChild('courseImage')
+  courseImage: ElementRef;
 
   constructor() {
-    console.log('This card1: ', this.card1);
   }
 
   ngAfterViewInit() {
-    console.log('Inside ngAfterViewInit. This card1: ', this.card1);
-    this.courses[1].description = 'Modified description';
+    console.log('Inside ngAfterViewInit. This courseImage: ', this.courseImage);
   }
 
   onCourseSelected(course: Course) {
-    console.log('This card1: ', this.card1);
   }
 }
