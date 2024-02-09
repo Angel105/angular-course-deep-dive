@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ElementRef, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, ViewChild, ViewChildren} from '@angular/core';
 import {COURSES} from '../db-data';
 import {CourseCardComponent} from './course-card/course-card.component';
 import {Course} from './model/course';
@@ -11,21 +11,13 @@ import {Course} from './model/course';
 export class AppComponent implements AfterViewInit {
   courses = COURSES;
 
-  title = COURSES[1].description;
-
-  course = COURSES[1];
-
-  @ViewChild('cardRef1', {read: ElementRef})
-  card1: ElementRef;
-
-  @ViewChild('courseImage')
-  courseImage: ElementRef;
-
+  @ViewChildren(CourseCardComponent)
+  cards;
   constructor() {
   }
 
   ngAfterViewInit() {
-    console.log('Inside ngAfterViewInit. This courseImage: ', this.courseImage);
+    console.log('These cards: ', this.cards);
   }
 
   onCourseSelected(course: Course) {
