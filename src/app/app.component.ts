@@ -15,13 +15,13 @@ export class AppComponent {
 
   course = COURSES[1];
 
-  @ViewChild('cardRef1')
-  card1: CourseCardComponent;
+  @ViewChild('cardRef1', {read: ElementRef})
+  card1: ElementRef;
 
   @ViewChild('container')
   containerDiv: ElementRef;
 
   onCourseSelected(course: Course) {
-    console.log('This containerDiv: ', this.containerDiv);
+    console.log('This card1: ', this.card1);
   }
 }
