@@ -27,6 +27,7 @@ export class AppComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     console.log('Inside ngAfterViewInit. This card1: ', this.card1);
+    this.courses[1].description = 'Modified description';
   }
 
   onCourseSelected(course: Course) {
