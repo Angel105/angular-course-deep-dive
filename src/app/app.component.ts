@@ -1,5 +1,4 @@
-import {log} from '@angular-devkit/build-angular/src/builders/ssr-dev-server';
-import {AfterViewInit, Component, ElementRef, QueryList, ViewChild, ViewChildren} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, QueryList, ViewChildren} from '@angular/core';
 import {COURSES} from '../db-data';
 import {CourseCardComponent} from './course-card/course-card.component';
 import {Course} from './model/course';
@@ -12,15 +11,13 @@ import {Course} from './model/course';
 export class AppComponent implements AfterViewInit {
   courses = COURSES;
 
-  @ViewChildren(CourseCardComponent)
-  cards: QueryList<CourseCardComponent>;
+  @ViewChildren(CourseCardComponent, {read: ElementRef})
+  cards: QueryList<ElementRef>;
   constructor() {
   }
 
   ngAfterViewInit() {
-    this.cards.changes.subscribe(
-      cards => console.log(cards)
-    );
+    console.log(this.cards);
   }
 
   onCourseSelected(course: Course) {
