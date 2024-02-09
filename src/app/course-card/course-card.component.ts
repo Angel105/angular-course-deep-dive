@@ -23,7 +23,7 @@ export class CourseCardComponent implements AfterViewInit {
   @Input() cardIndex!: number;
 
   @ContentChild(CourseImageComponent, {read: ElementRef})
-  image: CourseImageComponent;
+  image: ElementRef;
 
   ngAfterViewInit() {
     console.log(this.image);
