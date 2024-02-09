@@ -21,6 +21,10 @@ export class AppComponent {
   @ViewChild('container')
   containerDiv: ElementRef;
 
+  constructor() {
+    console.log('This card1: ', this.card1);
+  }
+
   onCourseSelected(course: Course) {
     console.log('This card1: ', this.card1);
   }
