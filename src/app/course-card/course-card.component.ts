@@ -21,7 +21,7 @@ export class CourseCardComponent implements AfterViewInit {
   courseEmitter = new EventEmitter<Course>;
   @Input() cardIndex!: number;
 
-  @ContentChild('courseImage')
+  @ContentChild('container')
   image;
 
   ngAfterViewInit() {
