@@ -32,8 +32,8 @@ export class CourseCardComponent implements AfterViewInit, AfterContentInit {
   courseEmitter = new EventEmitter<Course>;
   @Input() cardIndex!: number;
 
-  @ContentChildren(CourseImageComponent)
-  images: QueryList<CourseImageComponent>;
+  @ContentChildren(CourseImageComponent, {read: ElementRef})
+  images: QueryList<ElementRef>;
 
   ngAfterContentInit(): void {
     console.log(this.images);
